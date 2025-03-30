@@ -15,7 +15,7 @@
 
 ### If your approach fails, consider what you might learn:
 
-(djx3rn): One of the more intriguing things, is actually if this works, is understanding the nature of predictive modelling. The professor has brought up the problem of drawing causal inferences from models in class and how that is an entirely different ball game than statistical learning. I largely agree with that, so it's a question of why it's so effective without theory. That is to say, I have little knowledge of this phenomenon we're modelling, but the model does, and is that enough? Especially considering the NN non-linear proof today about how you can fit/train a non-linear function to match some other function e.g. fitting a representation of kinematics. I don't know, but it intuitively feels wrong to say fitting say observations for F=MA means deriving the equation from theory.
+(djx3rn): One of the more intriguing things, is actually if this works, is understanding the nature of predictive modelling. The professor has brought up the problem of drawing causal inferences from models in class and how that is an entirely different ball game than statistical learning. I largely agree with that, so it's a question of why it's so effective without theory. That is to say, I have little knowledge of this phenomenon we're modelling, but the model does, and is that enough? Especially considering the NN non-linear proofs about how you can fit/train a non-linear function to match some other function e.g. fitting a representation of kinematics. I don't know, but it intuitively feels wrong to say fitting say observations for F=MA means deriving the equation from theory.
 
 ### Feature Engineering
 
