@@ -13,7 +13,9 @@ We plan to do supervised learning. Specifically, we want to run regression model
 ## 5. What are weaknesses that you anticipate being an issue? How will you deal with them if they come up? If your approach fails, what might you learn from this unfortunate outcome?
 
 ### Identify potential weaknesses and how you plan to address them:
-
+1. If the dataset is incomplete, inconsistent, or contains errors, this could significantly affect model performance. Missing data could be particularly problematic if certain states do not report consistently, which is entirely possible due to how busy and hectic they would be during this period. Thus, we will rely on imputation techniques (e.g., mean, median, or regression-based imputation) and in certain cases, may exclude unreliable data points. 
+2. Overfitting could be an issue, especially since this dataset is huge and there are, in fact, a lot of variables in play. Thus, we will need to use cross-validation and regularization, as well as divide the data into train/test sets to make sure we're not working off of noise.
+3. For this specific dataset, we may have to worry about non-stationarity; hospital rates likely fluctuate regardless of COVID-19 cases, and lurking trends and seasonality may affect our data. Thus, we may need to apply differencing or detrending to make the data stationary. 
 
 ### If your approach fails, consider what you might learn:
 
