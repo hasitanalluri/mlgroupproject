@@ -5,6 +5,11 @@ An observation in our study is a daily state aggregated report from a state on s
 We plan to do supervised learning. Specifically, we want to run regression models on two situations. (1) We want to see if we can predict the percentage of hospitals with critical staff shortages in a state based on how many inpatient COVID-19 patients there are and how many inpatient beds are used in that state. (2) We want to see if we can predict the the COVID-19 onset in hospitals based on inpatient bed utilization and critical staff shortages. 
 
 ## 3. What models or algorithms do you plan to use in your analysis? How?
+We will begin with **linear regression** to model the relationship between COVID-19 hospitalizations and hospital bed utilization. This will allow us to interpret how increases in COVID-19 cases and staffing shortages are associated with higher usage of hospital resources. Linear regression also gives us interpretable coefficients and diagnostic tools, such as residual analysis and \( R^2 \), to evaluate the model's fit.
+We will use **logistic regression** to classify state-day observations into "high strain" or "low strain" based on whether hospital utilization or staff shortage thresholds are exceeded. This approach gives us interpretable odds ratios and is appropriate for binary outcomes.
+To capture nonlinear patterns, interaction effects, and threshold behavior (e.g., a certain level of COVID-19 admissions triggering capacity overload), we will use **decision trees**. Building on that, we will apply **random forests** for improved generalization and stability, using the model’s feature importance scores to better understand the drivers of strain.
+We may also use **Principal Component Analysis (PCA)** to reduce dimensionality, especially if many of our numerical features are correlated (such as different types of bed usage and admission metrics). PCA will help simplify the feature space while preserving most of the variance.
+All models will be evaluated using **cross-validation** to ensure generalizability and avoid overfitting. We’ll compare models based on \( R^2 \), RMSE, and MSE for regression tasks and accuracy, precision, recall, and F1 score for classification.
 
 ## 4. How will you know if your approach "works"? What does success mean?
 
@@ -24,5 +29,10 @@ We plan to do supervised learning. Specifically, we want to run regression model
 (djx3rn): Besides the above, if it actually does end up failing. We might have run into problems with having unpredictable variables in the model, badly measured data, and the problem of not having domain knowledge when creating models.
 
 ### Feature Engineering
+We will engineer features such as rolling 7-day averages of hospitalizations to smooth out reporting noise and add temporal context. We’ll also compute ratios like percent of beds used and percent of beds occupied by COVID-19 patients. If classification thresholds are too noisy day-to-day, we may binarize labels based on smoothed indicators or quantiles.
+We will explore correlations among numeric features to identify redundancy and apply **PCA** if needed. Categorical variables, such as state names (if included), may be one-hot encoded or used to group observations for stratified analysis.
 
 ### Results Presentation
+
+We will present our results through a combination of tables and visualizations. Regression models will be evaluated with \( R^2 \), RMSE, and residual plots; classification results will include confusion matrices and F1 scores. We will use bar charts to show feature importances, line plots to show hospital utilization trends over time, and scatter plots or heatmaps to reveal correlations. If time permits, we may explore how our model predictions change over time or vary by region, adding depth to our analysis.
+
