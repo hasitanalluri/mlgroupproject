@@ -24,7 +24,3 @@ We plan to do supervised learning. Specifically, we want to run regression model
 ### Feature Engineering
 
 ### Results Presentation
-
-```
-print("hi")
-```
