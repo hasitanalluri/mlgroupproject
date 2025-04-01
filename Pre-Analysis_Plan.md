@@ -1,6 +1,8 @@
 ## 1. What is an observation in your study?
+An observation in our study is a daily state aggregated report from a state on several factors relating to hospital capacity and COVID-19. Most notable, each observation in our study includes information on the number of hospitals with and without critical staff shortages, number of hospitals with COVID-19 patients, number of inpatient COVID-19 patients in total, and how many inpatient beds are available and used. 
 
 ## 2. Are you doing supervised or unsupervised learning? Classification or regression?
+We plan to do supervised learning. Specifically, we want to run regression models on two situations. (1) We want to see if we can predict the percentage of hospitals with critical staff shortages in a state based on how many inpatient COVID-19 patients there are and how many inpatient beds are used in that state. (2) We want to see if we can predict the the COVID-19 onset in hospitals based on inpatient bed utilization and critical staff shortages. 
 
 ## 3. What models or algorithms do you plan to use in your analysis? How?
 
@@ -22,3 +24,7 @@
 ### Feature Engineering
 
 ### Results Presentation
+
+```
+print("hi")
+```
